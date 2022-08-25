@@ -37,7 +37,6 @@ alter table empresa modify column cnpj varchar(30);
  ('central vinho','69.008.999/0001-77','2106-02-03'),
  ('tintos','55.994.022/0001-08','2000-05-19');
  select * from empresa;
-
  insert into funcionario(nome_func,setor_func,login_func,senha_func) values
  ('Maria Eduarda Bernardino Ettinger','Financeiro','maria.ettinger@godwine.com','1222000'),
  ('Vinicios Garcia Fagundes','Administrativo','vinicios.garcia@godwine.com','1222001'),
@@ -50,9 +49,7 @@ alter table empresa modify column cnpj varchar(30);
  ('Felipe de Sousa','Abastecimento','felipe.sousa@godwine.com','1222008'),
  ('Eduardo Damacedo','Pecuária','eduardo.damacedo2godwine.com','1222009');
  select * from funcionario;
- 
  insert into temperatura values 
-
 ('6º C', '2022-08-15 10:29:55'),
 ('7º C', '2022-10-15 10:29:55'),
 ('8º C', '2022-01-23 10:29:55'),
@@ -61,3 +58,15 @@ alter table empresa modify column cnpj varchar(30);
 ('11º C', '2022-06-30 10:29:55'),
 ('12º C', '2022-11-02 10:29:55');
 select * from temperatura;
+insert into vinicula(nome_viniula,tipo_vinho,ano_vinho) values
+('malbec', 'tinto','2000'),
+('evino', 'tinto', '1999'),
+('vinicula sete', 'tinto', '2005'),
+('casal garcia', 'branco', '2013'),
+('Concha y toro', 'branco', '1991'),
+('chileno branco', 'branco', '2009'),
+('nordeste branco', 'branco', '2003'),
+('garibaldi', 'rose', '1997'),
+('casal perinni', 'rose', '1950'),
+('east rose', 'rose', '1955');
+select * from viniculas;
