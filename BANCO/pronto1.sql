@@ -50,3 +50,14 @@ alter table empresa modify column cnpj varchar(30);
  ('Felipe de Sousa','Abastecimento','felipe.sousa@godwine.com','1222008'),
  ('Eduardo Damacedo','Pecuária','eduardo.damacedo2godwine.com','1222009');
  select * from funcionario;
+ 
+ insert into temperatura values 
+
+('6º C', '2022-08-15 10:29:55'),
+('7º C', '2022-10-15 10:29:55'),
+('8º C', '2022-01-23 10:29:55'),
+('9º C', '2022-04-04 10:29:55'),
+('10º C', '2022-12-07 10:29:55'),
+('11º C', '2022-06-30 10:29:55'),
+('12º C', '2022-11-02 10:29:55');
+select * from temperatura;
