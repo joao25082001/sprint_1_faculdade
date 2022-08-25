@@ -37,16 +37,17 @@ alter table empresa modify column cnpj varchar(30);
  ('central vinho','69.008.999/0001-77','2106-02-03'),
  ('tintos','55.994.022/0001-08','2000-05-19');
  select * from empresa;
+ select * from vinicula;
+insert into vinicula(nome_viniula,tipo_vinho,ano_vinho) values
+('malbec', 'tinto','2000'),
+('evino', 'tinto', '1999'),
+('vinicula sete', 'tinto', '2005'),
+('casal garcia', 'branco', '2013'),
+('Concha y toro', 'branco', '1991'),
+('chileno branco', 'branco', '2009'),
+('nordeste branco', 'branco', '2003'),
+('garibaldi', 'rose', '1997'),
+('casal perinni', 'rose', '1950'),
+('east rose', 'rose', '1955');
+select * from viniculas;
 
- insert into empresa(nome_empresa,cnpj,data_cadastro) values
- ('chadon brasil','77.637.658/0001-55','2022-08-12'),
- ('wine','47.877.611/0001-05','2022-08-12'),
- ('adegavinhos','58.997.155/0001-99','2005-10-10'),
- ('vinhedo','03.987.156/0003-10','2012-08-07'),
- ('anjos_roxo','88.017.100/0001-01','2015-11-03'),
- ('vinhado','09.088.900/0006-08','2011-08-09'),
- ('vinicolas enzo','01.002.100/0031-01','2015-06-03'),
- ('central vinho','69.008.980/0011-01','2015-12-01'),
- ('central vinho','69.008.999/0001-77','2106-02-03'),
- ('tintos','55.994.022/0001-08','2000-05-19');
- select * from empresa;
