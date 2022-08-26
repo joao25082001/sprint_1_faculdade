@@ -21,7 +21,7 @@ ano_vinho year
 );
 create table temperatura(
 id_temp int primary key auto_increment,
-temperatura decimal (4,2),
+temperatura float,
 data_temp datetime 
 );
 
@@ -62,7 +62,7 @@ alter table empresa modify column cnpj varchar(30);
 ('12º C', '2022-11-02 10:29:55');
 select * from temperatura;
 
-insert into vinicula(nome_viniula,tipo_vinho,ano_vinho) values
+insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
 ('malbec', 'tinto','2000'),
 ('evino', 'tinto', '1999'),
 ('vinicula sete', 'tinto', '2005'),
@@ -73,4 +73,4 @@ insert into vinicula(nome_viniula,tipo_vinho,ano_vinho) values
 ('garibaldi', 'rose', '1997'),
 ('casal perinni', 'rose', '1950'),
 ('east rose', 'rose', '1955');
-select * from viniculas;
+select * from vinicula;
