@@ -25,6 +25,11 @@ temperatura float,
 data_temp datetime 
 );
 
+create table umidade(
+    id_umidade int primary key auto_increment,
+    umidade float,
+);
+
 alter table empresa modify column cnpj varchar(30);
  insert into empresa(nome_empresa,cnpj,data_cadastro) values
  ('chadon brasil','77.637.658/0001-55','2022-08-12'),
@@ -61,6 +66,16 @@ alter table empresa modify column cnpj varchar(30);
 ('11º C', '2022-06-30 10:29:55'),
 ('12º C', '2022-11-02 10:29:55');
 select * from temperatura;
+
+insert into umidade values 
+(20, '2022-08-15 10:29:55'),
+(50, '2022-10-15 10:29:55'),
+(55, '2022-01-23 10:29:55'),
+(23, '2022-04-04 10:29:55'),
+(67, '2022-12-07 10:29:55'),
+(54, '2022-06-30 10:29:55'),
+(67, '2022-11-02 10:29:55');
+select * from umidade;
 
 insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
 ('malbec', 'tinto','2000'),
