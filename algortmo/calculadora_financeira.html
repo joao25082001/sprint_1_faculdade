@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="cachoro">Calculadora financeira</title>
+</head>
+<body>
+    quantidade de vinhos: <input id="qnt_vinho"> <br>
+    Média de preços de cada vinho <input  id="Média"><br>
+     <button onclick="calcular()"> Simule</button>
+     <div id="texto_calculo"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+         var qnt = Number(qnt_vinho.value)
+         var preço =Number(Média.value)
+         var soma_estoque = qnt * preço
+         var estoque_perdido = qnt * 0.25
+         var porcentagem_prejuizo = soma_estoque * 0.25
+    texto_calculo.innerHTML =`Com os dados obtidos vimos que a cada ${qnt} vinhos com a média de preço de ${preço} você perde cerca de ${estoque_perdido} vinhos que é igual ${porcentagem_prejuizo.toFixed(2)} reais em vinhos `
+}
+</script>
