@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="cachoro">Calculadora financeira</title>
+</head>
+
+<body>
+    <br>
+    <b> Quantidade de Garrafas:</b> <br>
+    <input id="qnt_garrafa"> <br>
+    <b> Preço de cada Garrafa:</b> <br>
+    <input id="preco_garrafa"><br>
+
+<br> 
+    <button onclick="calcular()"> SIMULE </button>
+    <div id="texto_calculo"></div>
+
+<br>
+
+</body>
+
+</html>
+<script>
+    function calcular() {
+        quantidade_garrafas = Number(qnt_garrafa.value);
+        valor_garrafa = Number(preco_garrafa.value);
+
+        // pegar os 25% que é a porcentagem do desperdicio 
+        var desperdicio = quantidade_garrafas * 0.25;
+
+        // pegar o desperdicio e multiplicar pelo valor de garrafa
+        var valor_desperdicado = desperdicio * valor_garrafa;
+
+        // 25% de disperdicio são reduzidos com os nossos sensores estipuladamente em 3%
+        var valor_sensores = (quantidade_garrafas * 0.03) * valor_garrafa;
+        texto_calculo.innerHTML = `
+        <p> Estipula-se nos mercados que há uma perda de 25% no estoque dos vinhos, com isso você como comerciante perderia R$${valor_desperdicado} 
+        reais. <br>
+        Com nossos sensores você teria uma perda estimada de 3% apenas que seria ${valor_sensores} reais. <p/>
+        `;
+    }
+
+</script>
