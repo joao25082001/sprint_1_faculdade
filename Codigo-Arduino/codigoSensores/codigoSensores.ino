@@ -4,7 +4,7 @@
 * Configurações iniciais sobre os sensores
 * DHT11, LM35, LDR5 e TCRT5000
 */
-int dht_pin = A3; //defino o pino do DHT analógico
+int dht_pin = A1; //defino o pino do DHT analógico
 
 
 DHT dht_2 = DHT(dht_pin, dht_type); //pode-se configurar diversos *sensores DHTxx
@@ -12,7 +12,7 @@ DHT dht_2 = DHT(dht_pin, dht_type); //pode-se configurar diversos *sensores DHTx
 
 int lm35_pin = A2, leitura_lm35 = 0;
 float temperatura;
-int ldr_pin = A1, leitura_ldr = 0;
+int ldr_pin = A3, leitura_ldr = 0;
 int switch_pin = 7;
 
 

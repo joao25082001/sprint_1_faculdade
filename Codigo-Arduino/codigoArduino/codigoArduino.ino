@@ -2,7 +2,7 @@
 #define dht_type DHT11 // define qual o tipo de sensor DHTxx que se está
 /**
  * Configurações iniciais sobre os sensores
- * DHT11,
+ * DHT11, TOTALMENTE CONFIGURADO
  */
 int dht_pin = A2;
 DHT dht_1 = DHT(dht_pin, dht_type); // pode-se configurar diversos sensores DHTxx
