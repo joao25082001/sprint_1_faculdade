@@ -61,13 +61,13 @@ alter table empresa modify column cnpj varchar(30);
  select * from funcionario;
  
  insert into temperatura(temperatura,data_temp) values 
-('6', '2022-08-15 10:29:55'),
-('7 ', '2022-10-15 10:29:55'),
-('8 ', '2022-01-23 10:29:55'),
-('9', '2022-04-04 10:29:55'),
-('10', '2022-12-07 10:29:55'),
-('11', '2022-06-30 10:29:55'),
-('12', '2022-11-02 10:29:55');
+('6','2022-08-15 10:22:55'),
+('7','2022-10-15 10:04:55'),
+('8','2022-01-23 10:49:55'),
+('9','2022-04-04 10:22:55'),
+('10','2022-12-07 10:19:55'),
+('11','2022-06-30 10:47:55'),
+('12','2022-11-02 10:01:55');
 select * from temperatura;
 
 insert into umidade(umidade,data_umi) values 
@@ -112,8 +112,5 @@ select concat('olá ',(select nome_func from funcionario where id_func = 1),' se
 update funcionario set setor_func ='contabil ' where id_func = 4;
 select * from umidade order by umidade;
 select * from temperatura order by temperatura;
-
-
-
 
 show table status;
