@@ -1,6 +1,5 @@
  
 create database sprint_1;
-
 use sprint_1;
 create table empresa(
 id_empresa int primary key auto_increment,
@@ -15,9 +14,9 @@ setor_func varchar(40),
 login_func varchar(100),
 senha_func char(10)
 );
-create table vinicula(
-id_vinicula int primary key auto_increment,
-nome_vinicula varchar(40),
+create table vinicola(
+id_vinicola int primary key auto_increment,
+nome_vinicola varchar(40),
 tipo_vinho  varchar(40),
 ano_vinho year
 );
@@ -43,7 +42,7 @@ alter table empresa modify column cnpj varchar(30);
  ('vinhado','09.088.900/0006-08','2011-08-09'),
  ('vinicolas enzo','01.002.100/0031-01','2015-06-03'),
  ('central vinho','69.008.980/0011-01','2015-12-01'),
- ('central vinho','69.008.999/0001-77','2106-02-03'),
+ ('central vinho','69.008.999/0001-77','2006-02-03'),
  ('tintos','55.994.022/0001-08','2000-05-19');
  select * from empresa;
  
@@ -72,18 +71,18 @@ select * from temperatura;
 
 insert into umidade(umidade,data_umi) values 
 (20, '2022-08-15 10:29:55'),
-(50, '2022-10-15 10:29:55'),
-(55, '2022-01-23 10:29:55'),
-(23, '2022-04-04 10:29:55'),
-(67, '2022-12-07 10:29:55'),
-(54, '2022-06-30 10:29:55'),
-(67, '2022-11-02 10:29:55');
+(50, '2022-10-15 10:04:55'),
+(55, '2022-01-23 10:49:55'),
+(23, '2022-04-04 10:22:55'),
+(67, '2022-12-07 10:19:55'),
+(54, '2022-06-30 10:47:55'),
+(67, '2022-11-02 10:01:55');
 select * from umidade;
 
-insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
+insert into vinicola(nome_vinicola,tipo_vinho,ano_vinho) values
 ('malbec', 'tinto','2000'),
 ('evino', 'tinto', '1999'),
-('vinicula sete', 'tinto', '2005'),
+('vinicola sete', 'tinto', '2005'),
 ('casal garcia', 'branco', '2013'),
 ('Concha y toro', 'branco', '1991'),
 ('chileno branco', 'branco', '2009'),
@@ -92,24 +91,26 @@ insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
 ('casal perinni', 'rose', '1950'),
 ('east rose', 'rose', '1955');
 select * from umidade;
-select * from vinicula;
+select * from vinicola;
 select * from temperatura;
 select * from empresa; 
 select * from funcionario;
-select * from vinicula where nome_vinicula like '%e%';
+select * from vinicola where nome_vinicola like '%e%';
 select * from temperatura where temperatura >= 5;
 select * from umidade where umidade >= 40;
 select * from empresa where data_cadastro like '%08%';
 select * from funcionario where setor_func = 'administrativo';
-select concat('olá ',(select nome_func from funcionario where id_func = 1),' seus vinhos registraram a umidade de ',
-(select umidade from umidade where id_umidade =2),' no dia '
+select concat('Olá ',(select nome_func from funcionario where id_func = 1),', seus vinhos registraram a umidade de ',
+(select umidade from umidade where id_umidade =2),'% no dia '
  ,(select data_umi from umidade where data_umi like '%08%')
  ) as 'frase';
- select concat('olá ',(select nome_func from funcionario where id_func = 2),' seus vinhos registraram a umidade de ',
-(select umidade from umidade where id_umidade =5),' e a temperatura ',(select temperatura from temperatura where id_temp = 5 ), 
-' no dia ',(select data_umi from umidade where data_umi like '%04%')
+ 
+
+ select concat('Olá ',(select nome_func from funcionario where id_func = 2),', seus vinhos registraram a umidade de ',
+(select umidade from umidade where id_umidade =5),'% e a temperatura ',(select temperatura from temperatura where id_temp = 5),'º C no dia',(select data_umi from umidade where data_umi like '%08%')
  ) as 'frase';
 update funcionario set setor_func ='contabil ' where id_func = 4;
+select data_umi from umidade where data_umi like '%04%';
 select * from umidade order by umidade;
 select * from temperatura order by temperatura;
 
