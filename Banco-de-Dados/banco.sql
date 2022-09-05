@@ -15,9 +15,9 @@ setor_func varchar(40),
 login_func varchar(100),
 senha_func char(10)
 );
-create table vinicula(
-id_vinicula int primary key auto_increment,
-nome_vinicula varchar(40),
+create table vinicola(
+id_vinicola int primary key auto_increment,
+nome_vinicola varchar(40),
 tipo_vinho  varchar(40),
 ano_vinho year
 );
@@ -80,10 +80,10 @@ insert into umidade(umidade,data_umi) values
 (67, '2022-11-02 10:29:55');
 select * from umidade;
 
-insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
+insert into vinicola(nome_vinicola,tipo_vinho,ano_vinho) values
 ('malbec', 'tinto','2000'),
 ('evino', 'tinto', '1999'),
-('vinicula sete', 'tinto', '2005'),
+('vinicola sete', 'tinto', '2005'),
 ('casal garcia', 'branco', '2013'),
 ('Concha y toro', 'branco', '1991'),
 ('chileno branco', 'branco', '2009'),
@@ -92,22 +92,22 @@ insert into vinicula(nome_vinicula,tipo_vinho,ano_vinho) values
 ('casal perinni', 'rose', '1950'),
 ('east rose', 'rose', '1955');
 select * from umidade;
-select * from vinicula;
+select * from vinicola;
 select * from temperatura;
 select * from empresa; 
 select * from funcionario;
-select * from vinicula where nome_vinicula like '%e%';
+select * from vinicola where nome_vinicola like '%e%';
 select * from temperatura where temperatura >= 5;
 select * from umidade where umidade >= 40;
 select * from empresa where data_cadastro like '%08%';
 select * from funcionario where setor_func = 'administrativo';
-select concat('olá ',(select nome_func from funcionario where id_func = 1),' seus vinhos registraram a umidade de ',
-(select umidade from umidade where id_umidade =2),' no dia '
+select concat('Olá ',(select nome_func from funcionario where id_func = 1),', seus vinhos registraram a umidade de ',
+(select umidade from umidade where id_umidade =2),'% no dia '
  ,(select data_umi from umidade where data_umi like '%08%')
  ) as 'frase';
- select concat('olá ',(select nome_func from funcionario where id_func = 2),' seus vinhos registraram a umidade de ',
-(select umidade from umidade where id_umidade =5),' e a temperatura ',(select temperatura from temperatura where id_temp = 5 ), 
-' no dia ',(select data_umi from umidade where data_umi like '%04%')
+ select concat('Olá ',(select nome_func from funcionario where id_func = 2),', seus vinhos registraram a umidade de ',
+(select umidade from umidade where id_umidade =5),'% e a temperatura ',(select temperatura from temperatura where id_temp = 5 ), 
+'º C no dia ',(select data_umi from umidade where data_umi like '%04%')
  ) as 'frase';
 update funcionario set setor_func ='contabil ' where id_func = 4;
 select * from umidade order by umidade;
