@@ -38,9 +38,9 @@
         // 25% de disperdicio são reduzidos com os nossos sensores estipuladamente em 3%
         var valor_sensores = (quantidade_garrafas * 0.03) * valor_garrafa;
         texto_calculo.innerHTML = `
-        <p> Estipula-se nos mercados que há uma perda de 25% no estoque dos vinhos, com isso você como comerciante perderia R$${valor_desperdicado} 
+        <p> Estipula-se nos mercados que há uma perda de 25% no estoque dos vinhos, com isso você como comerciante perderia R$${valor_desperdicado.toFixed(2)} 
         reais. <br>
-        Com nossos sensores você teria uma perda estimada de 3% apenas que seria ${valor_sensores} reais. <p/>
+        Com nossos sensores você teria uma perda estimada de 3% apenas que seria R$${valor_sensores.toFixed(2)} reais. <p/>
         `;
     }
 
