@@ -4,7 +4,7 @@
 * Configurações iniciais sobre os sensores
 * DHT11, LM35, LDR5 e TCRT5000
 */
-int dht_pin = A1; //defino o pino do DHT analógico
+int dht_pin = A5; //defino o pino do DHT analógico
 
 
 DHT dht_2 = DHT(dht_pin, dht_type); //pode-se configurar diversos *sensores DHTxx
@@ -15,7 +15,7 @@ float temperatura;
 int ldr_pin = A3, leitura_ldr = 0;
 int switch_pin = 7;
 
-
+// configuração inicial
 void setup()
 {
 Serial.begin(9600);
@@ -26,7 +26,7 @@ pinMode(switch_pin, INPUT);
 }
 
 
-
+//codigo rodando
 
 void loop()
 {
@@ -70,5 +70,5 @@ Serial.println(1);
 else {
 Serial.println(0);
 }
-delay(2000);
+delay(60000);
 }

@@ -25,10 +25,10 @@ void loop()
   else
   {
     Serial.print(umidade);
-    Serial.print("%");
+    Serial.print("% umidade");
     Serial.println(";");
     Serial.print(temperatura);
-    Serial.print("ºC");
+    Serial.print("ºC de temperatura");
     Serial.println(";");
   }
   delay(4000);

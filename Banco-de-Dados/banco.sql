@@ -1,4 +1,4 @@
- 
+
 create database sprint_1;
 use sprint_1;
 create table empresa(
