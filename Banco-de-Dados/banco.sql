@@ -107,7 +107,7 @@ select concat('Olá ',(select nome_func from funcionario where id_func = 1),', s
  
 
  select concat('Olá ',(select nome_func from funcionario where id_func = 2),', seus vinhos registraram a umidade de ',
-(select umidade from umidade where id_umidade =5),'% e a temperatura ',(select temperatura from temperatura where id_temp = 5),'º C no dia',(select data_umi from umidade where data_umi like '%08%')
+(select umidade from umidade where id_umidade =5),'% e a temperatura ',(select temperatura from temperatura where id_temp = 5),'º C no dia ',(select data_umi from umidade where data_umi like '%08%')
  ) as 'frase';
 update funcionario set setor_func ='contabil ' where id_func = 4;
 select data_umi from umidade where data_umi like '%04%';
